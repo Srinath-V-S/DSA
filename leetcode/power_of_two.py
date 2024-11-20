@@ -1,6 +1,19 @@
 from math import sqrt
 
 
+def isPowerOfFour(self, n):
+    """
+    :type n: int
+    :rtype: bool
+    """
+    if n <= 0:
+        return False
+    while n % 4 == 0:
+        n = n // 4
+    # if a number is pow of 2 then n will be 1 at the end of loop
+    return n == 1
+
+
 def isPowerOfTwo(n):
     """
     :type n: int
