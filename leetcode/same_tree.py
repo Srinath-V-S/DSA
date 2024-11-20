@@ -13,28 +13,30 @@ def isSameTree(p, q):
     :rtype: bool
     """
 
-
-    def traversal(p,q):
-        if not p and not q: # if both nodes are null then both p and q are same tree
+    def traversal(p, q):
+        if not p and not q:
             return True
-        if not p or not q: # if either one of p or q is null, then both p and q are not same tree
+        if not p or not q:
             return False
         if p.val != q.val:
             return False
-        left = traversal(p.left,q.left)
-        # check left subtree, if it fails return false
+
+        left = traversal(p.left, q.left)
         if not left:
             return False
-        return traversal(p.right,q.right)
+        right = traversal(p.right, q.right)
+        if not right:
+            return False
 
+        return True
 
-    return traversal(p,q)
+    return traversal(p, q)
 
 def main():
 
     p = TreeNode(1)
-    p.left = TreeNode(2)
-    p.right = TreeNode(1)
+    p.left = TreeNode(22)
+    p.right = TreeNode(3)
 
     # Tree 2
     q = TreeNode(1)
