@@ -1,7 +1,20 @@
 from math import sqrt
 
 
-def isPowerOfFour(self, n):
+def isPowerOfThree( n):
+    """
+    :type n: int
+    :rtype: bool
+    """
+    if n <= 0:
+        return False
+    while n % 3 == 0:
+        n = n // 3
+    # if a number is pow of 3 then n will be 1 at the end of loop
+    return n == 1
+
+
+def isPowerOfFour(n):
     """
     :type n: int
     :rtype: bool
@@ -10,7 +23,7 @@ def isPowerOfFour(self, n):
         return False
     while n % 4 == 0:
         n = n // 4
-    # if a number is pow of 2 then n will be 1 at the end of loop
+    # if a number is pow of 4 then n will be 1 at the end of loop
     return n == 1
 
 
