@@ -9,7 +9,7 @@ def heap_sort_using_min_heap(A):
         min_value = heapq.heappop(A)
         new_list.append(min_value)
 
-    # print(new_list)
+    return new_list
 
 
 # descending order
@@ -28,10 +28,10 @@ def heap_sort_using_max_heap(B):
         min_value = -heapq.heappop(B)
         new_list.append(min_value)
 
-    print(new_list)
+    return new_list
 
 
 A = [-3,-2,-4,1,2,5,7,5,3]
-heap_sort_using_min_heap(A)
+print(heap_sort_using_min_heap(A))
 B = [-3,-2,-4,1,2,5,7,5,3]
-heap_sort_using_max_heap(B)
+print(heap_sort_using_max_heap(B))
