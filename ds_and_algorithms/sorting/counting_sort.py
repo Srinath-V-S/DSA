@@ -20,3 +20,6 @@ def counting_sort(A):
 A = [5,2,1,3,6,6,4]
 
 print(counting_sort(A))
+
+
+#only works for positive numbers.
